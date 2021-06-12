@@ -444,7 +444,7 @@ impl<'a> Debug for Entry<'a> {
     }
 }
 
-enum EntryKind {
+pub enum EntryKind {
     Directory,
     Regular { executable: bool, data: Vec<u8> },
     Symlink { target: PathBuf },
