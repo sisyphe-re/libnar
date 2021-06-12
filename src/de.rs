@@ -275,7 +275,7 @@ impl<'a, R: Read> Debug for Entries<'a, R> {
 
 pub struct Entry<'a> {
     name: PathBuf,
-    kind: EntryKind,
+    pub kind: EntryKind,
     canonicalize_mtime: bool,
     remove_xattrs: bool,
     _marker: PhantomData<&'a ()>,
